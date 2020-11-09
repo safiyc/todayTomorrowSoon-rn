@@ -9,20 +9,25 @@ const renderGridItem = (itemData) => {
   );
 }
 
-const TodayScreen = props => {
+const TodayScreen = () => {
   const todayTasks = TASKS.filter(task => task.due === 'Today');
   // console.log(todayTasks);
-  
+
   return (
-    <FlatList data={todayTasks} renderItem={renderGridItem} numColumns={1} />
+    <FlatList data={todayTasks} renderItem={renderGridItem} numColumns={1} style={styles.todayList} />
   );
 };
 
 const styles = StyleSheet.create({
+  todayList: {
+    flex: 1,
+    backgroundColor: 'red'
+  },
   gridItem: {
     flex: 1,
     margin: 15,
-    height: 50
+    height: 50,
+    backgroundColor: 'white'
   }
 });
 

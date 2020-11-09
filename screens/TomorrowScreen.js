@@ -9,16 +9,20 @@ const renderGridItem = (itemData) => {
   );
 }
 
-const TomorrowScreen = props => {
+const TomorrowScreen = () => {
   const tomorrowTasks = TASKS.filter(task => task.due === 'Tomorrow');
   // console.log(tomorrowTasks);
-  
+
   return (
-    <FlatList data={tomorrowTasks} renderItem={renderGridItem} numColumns={1} />
+    <FlatList data={tomorrowTasks} renderItem={renderGridItem} numColumns={1} style={styles.tomorrowList} />
   );
 };
 
 const styles = StyleSheet.create({
+  tomorrowList: {
+    flex: 1,
+    backgroundColor: 'green'
+  },
   gridItem: {
     flex: 1,
     margin: 15,

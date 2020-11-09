@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-// import { Text, View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';  //  screen renders only after assets like font are loaded
 import { enableScreens } from 'react-native-screens';
 
-import DueDateNavigator from './navigation/DueDateNavigator';
+// import DueDateNavigator from './navigation/DueDateNavigator';
+import SwipeNavigation from './navigation/DueDateNavigator';
 
 enableScreens();
 
@@ -24,5 +25,6 @@ export default function App() {
     );
   }
 
-  return <DueDateNavigator />;
+  // return <DueDateNavigator />;
+  return <SwipeNavigation />;
 }

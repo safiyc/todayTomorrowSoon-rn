@@ -12,13 +12,17 @@ const renderGridItem = (itemData) => {
 const SoonScreen = props => {
   const soonTasks = TASKS.filter(task => task.due === 'Soon');
   // console.log(soonTasks);
-  
+
   return (
-    <FlatList data={soonTasks} renderItem={renderGridItem} numColumns={1} />
+    <FlatList data={soonTasks} renderItem={renderGridItem} numColumns={1} style={styles.soonList} />
   );
 };
 
 const styles = StyleSheet.create({
+  soonList: {
+    flex: 1,
+    backgroundColor: 'blue'
+  },
   gridItem: {
     flex: 1,
     margin: 15,
