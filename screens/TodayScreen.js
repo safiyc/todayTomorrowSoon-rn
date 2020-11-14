@@ -21,7 +21,7 @@ const TodayScreen = () => {
 const styles = StyleSheet.create({
   todayList: {
     flex: 1,
-    backgroundColor: 'red'
+    backgroundColor: 'salmon'
   },
   gridItem: {
     flex: 1,

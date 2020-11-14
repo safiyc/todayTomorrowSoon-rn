@@ -4,8 +4,8 @@ import * as Font from 'expo-font';
 import { AppLoading } from 'expo';  //  screen renders only after assets like font are loaded
 import { enableScreens } from 'react-native-screens';
 
-// import DueDateNavigator from './navigation/DueDateNavigator';
-import SwipeNavigation from './navigation/DueDateNavigator';
+import Header from './screens/Header';
+import SwipeNavigation from './navigation/SwipeNavigation';
 
 enableScreens();
 
@@ -26,5 +26,11 @@ export default function App() {
   }
 
   // return <DueDateNavigator />;
-  return <SwipeNavigation />;
+  // return <SwipeNavigation />;
+  return (
+    <>
+      <Header />
+      <SwipeNavigation />
+    </>
+  )
 }
