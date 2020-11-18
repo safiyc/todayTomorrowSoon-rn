@@ -1,6 +1,6 @@
-// using swipe screen to navigate to today/tomorrow/soon
 import React, { useState } from 'react';
 import { Dimensions, View, Text, StyleSheet } from 'react-native';
+// using swipe screen to navigate thru today/tomorrow/soon
 import { TabView, TabBar, SceneMap } from 'react-native-tab-view';
 
 import TodayScreen from '../screens/TodayScreen';
@@ -44,20 +44,16 @@ export default function SwipeNavigation() {
   });
 
   return (
-    <TabView
-      navigationState={{ index, routes }}
-      renderScene={renderScene}
-      onIndexChange={setIndex}
-      initialLayout={initialLayout}
-      renderTabBar={renderTabBar}
-      style={styles.container}
-    // tabBarPosition='bottom'
-    />
+    <>
+      <TabView
+        navigationState={{ index, routes }}
+        renderScene={renderScene}
+        onIndexChange={setIndex}
+        initialLayout={initialLayout}
+        renderTabBar={renderTabBar}
+      // tabBarPosition='bottom'
+      // style={styles.container}
+      />
+    </>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    // backgroundColor: 'yellow'
-  }
-})
+};
